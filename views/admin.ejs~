@@ -1,0 +1,16 @@
+<html>
+<head>
+<title> Admin Page </title>
+</head>
+<body>
+<form action="/admin/" method="post">
+<input type="text" name="email"\>
+<input type="submit" value="Send Test Link">
+<% for (var i=0;i<data.length;i++)  { %>
+  <p> <%= data[i].email %> </p>
+   
+<% } %>
+<br/>
+</form>
+</body>
+</html>

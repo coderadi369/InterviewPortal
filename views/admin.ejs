@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> Admin Page </title>
+</head>
+<body>
+<form action="/admin/" method="post">
+<input type="text" name="email"\>
+<input type="submit" value="Send Test Link">
+<table>
+<th> email </th>
+<th> token </th>
+<th> opened </th>
+<th> Score   </th>
+<% for (var i=0;i<data.length;i++)  { %>
+  <tr>
+  <td> <%= data[i].email %> </td>
+  <td> <%= data[i].token %> </td>
+  <td> <%= data[i].opened %> </td>
+  <td> <%= data[i].score %> </td>
+  </tr> 
+<% } %>
+<br/>
+</form>
+</body>
+</html>

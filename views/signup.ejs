@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Signup page for admin </title>
+<style>
+form
+{
+  margin:200 auto;
+  width:500px;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<!-- show any messages that come back with authentication -->
+<% if (message.length > 0) { %>
+        <div><%= message %></div>
+    <% } %>
+
+<form action='/admin/signup' method='post'>
+ Email:<br>
+  <input type="text" name="email">
+  <br>
+  password:<br>
+  <input type="password" name="password">
+  <br><br>
+  <input type="submit" value="Submit">
+   <br><br>
+   <a href="/admin/login/">Login</a>
+ </form>
+
+</body>
+</html>

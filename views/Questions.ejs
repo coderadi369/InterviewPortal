@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> Questions </title>
+</head>
+<body>
+<p> Questions will be dispalyed here </p>
+<% for (var i=0;i<data.length;i++)  { %>
+  <p> <%= data[i].Question %> </p>
+   <input type="text" id=<%= i%> \>
+<% } %>
+<br/>
+<br/>
+<button onclick="calculate_score()">Submit test</button>
+</body>
+<script>
+  function calculate_score()
+  {
+    var data=<%- JSON.stringify(data) %>;
+    console.log(data);
+     var count=0;
+     for(var i=0;i<5;i++)
+     {
+         var x=document.getElementById(i).value;
+         if(x==(data[i].ans))
+         {
+            count=count+1;
+         }
+        
+     }
+    
+     console.log(count);
+     window.location.href="/result?score="+count;
+   
+  }
+</script>
+</html>
